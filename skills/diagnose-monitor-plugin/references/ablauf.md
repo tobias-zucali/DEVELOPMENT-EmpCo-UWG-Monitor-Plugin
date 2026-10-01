@@ -1,6 +1,6 @@
 ---
 license: Copyright (c) 2026 Niederschick OG & Tobias Zucali. All rights reserved. Use restricted to customers with a valid agreement with Niederschick OG.
-build: v3.1-47-g0a4d07d
+build: v3.1-49-gda9d29d
 ---
 
 # Ablaufbericht
@@ -40,6 +40,10 @@ Nicht zuordenbar: `unknown`.
 
 Prüfe ohne Abruf, was der Verlauf und die Werkzeugliste belegen: ob `fetch_claims_monitor_step` sichtbar ist (Werkzeugname wörtlich) und ob die Anmeldung besteht (belegt durch erfolgreich geladene Schrittantworten, widerlegt durch eine Anmelde- oder Verbindungsmeldung im Verlauf, sonst `unknown`). Die Kurzfassung benennt das Ergebnis mit seinem Beleg. „Keine Befunde“ steht nur für Brüche im Verlauf, nie für eine nicht geprüfte Verbindung; ohne Beleg lautet die Angabe „nicht geprüft“. Wer mehr braucht (Fähigkeiten, Versionen, Abruf), ruft die Standarddiagnose auf. Innerhalb der Diagnose entfällt dieser Abschnitt, weil sie `connection` selbst belegt.
 
+## Eckdaten
+
+Der Bericht trägt immer die Eckdaten der Umgebung, damit der Support den Lauf einordnen kann: Anbieter, Produkt, Oberfläche und Modell (nur soweit die Anweisungen es ausdrücklich sagen, sonst `unknown`), Plugin-Version und Version je Skill des Pakets (Schritt 5 der Anweisung, Kurzform) sowie die einfachen Checks für Unteragenten und Webzugriff (Schritt 2 der Anweisung). Jeder Wert nennt `source` und `evidence`.
+
 ## 3. Vergleich mit dem Soll
 
 Gehe die Kriterien der geladenen Antworten einzeln durch: die Voraussetzung einer Prüfantwort (Übergabe des zuletzt geladenen Schritts) und die Punkte des Abschnitts „Ausgabe vor Versand prüfen“ in der Antwort von `report-compose`. Markiere jedes Kriterium als erfüllt, nicht erfüllt, teilweise oder `unknown` mit einer Zeile Begründung, die auf Struktur verweist (etwa „Ausgabeabschnitt 2 ohne Quellenangabe“), nicht auf Inhalt. War `report-compose` nicht geladen, lautet der Befund „Ausgabeprüfung nicht möglich: Schritt nicht geladen“.
@@ -48,11 +52,15 @@ Gehe die Kriterien der geladenen Antworten einzeln durch: die Voraussetzung eine
 
 Gib in dieser Reihenfolge aus:
 
-1. **Kurzfassung** in höchstens acht Zeilen für die Person, gruppiert nach Ursachengruppe, mit dem ersten Schritt, den der Support prüfen sollte.
+1. **Kurzfassung** in höchstens acht Zeilen für die Person: eine Zeile Eckdaten (Oberfläche, Plugin-Version), dann gruppiert nach Ursachengruppe mit dem ersten Schritt, den der Support prüfen sollte.
 2. **Bericht für den Support** in genau einem Codeblock (Format YAML; innerhalb der Diagnose derselbe Block wie dort, mit diesen Schlüsseln auf oberster Ebene), den du der Person als „den Bericht“ nennst:
 
 ```yaml
 ablauf: {version: 1, status: complete | incomplete, observed_at: "<UTC-Zeit oder unknown>"}
+eckdaten:                       # nur eigenständig; innerhalb der Diagnose stehen dieselben Werte in `runtime`, `capabilities` und `versions`
+  runtime: {vendor: ..., product: ..., surface: ..., model: ...}        # je {value, source, evidence}
+  capabilities: {agents.spawn: ..., web.fetch: ...}                      # je {value, source, evidence}
+  versions: [{component: plugin, version: "..."}, {component: "skill:<Name>", version: "...", build: "..."}]
 connection: {tool_visible: true | false | unknown, name: "...", auth: signed_in | required | unknown, evidence: "..."}   # nur eigenständig
 steps:                          # in der Reihenfolge des Ladens
   - {step: report-intake, version: "...", build: unknown, platform: "...", variant: "... | basis", request_id: "<oder unknown>", next_expected: [...], next_actual: "..."}
@@ -70,6 +78,7 @@ Empfiehl keine Änderungen an den Regeln; beschreibe nur, was im Verlauf geschah
 
 ## Definition of done
 
+- [ ] Die Eckdaten nennen Oberfläche, Plugin- und Skill-Versionen sowie die Checks für Unteragenten und Webzugriff mit Beleg oder `unknown`.
 - [ ] Die Schrittkette nennt jeden geladenen Schritt mit Kennung, Version und `request_id` (oder `unknown`) und benennt vorausgesetzte, aber nicht geladene Schritte.
 - [ ] Jeder Friction-Eintrag nennt Schritt, Art und Ursachengruppe und beruht auf einem Beleg im Verlauf.
 - [ ] Jedes Kriterium des Vergleichs trägt ein Ergebnis und eine strukturelle Begründung; nicht Belegbares ist `unknown`.

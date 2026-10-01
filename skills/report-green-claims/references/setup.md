@@ -1,6 +1,6 @@
 ---
 license: Copyright (c) 2026 Niederschick OG & Tobias Zucali. All rights reserved. Use restricted to customers with a valid agreement with Niederschick OG.
-build: v3.1-47-g0a4d07d
+build: v3.1-49-gda9d29d
 ---
 
 # Einrichtung: Plugin für Claude und ChatGPT
@@ -41,7 +41,7 @@ Eine neue Cowork-Sitzung starten und einen Prüfauftrag stellen, z. B. „Prüfe
 
 ### Aktualisieren
 
-Mit eingeschaltetem **Automatisch synchronisieren** übernimmt Claude neue Versionen aus dem Marketplace selbst. Für sofortige Aktualisierung unter **Anpassungen > Plugins > Hinzufügen > Marketplaces verwalten** den Marketplace `tobias-zucali/EmpCo-UWG-Monitor-Plugin` neu synchronisieren; in Claude Code `/plugin marketplace update empco-uwg-monitor-dev`. Die Plugin-Version auf der Seite des Plugins bestätigt den neuen Stand. Danach eine neue Cowork-Sitzung starten; der Connector bleibt in der Regel verbunden, andernfalls wie unter „Verbindung neu anmelden“ erneut verbinden.
+Mit eingeschaltetem **Automatisch synchronisieren** übernimmt Claude neue Versionen aus dem Marketplace selbst. Für sofortige Aktualisierung unter **Anpassungen > Plugins > Hinzufügen > Marketplaces verwalten** beim Marketplace `tobias-zucali/EmpCo-UWG-Monitor-Plugin` über das Menü (drei Punkte) **Nach Updates suchen** wählen; in Claude Code `/plugin marketplace update empco-uwg-monitor-dev`. Der Hinweis „Ausführbare Dateien oder Einstellungen können von der Version abweichen, die du vor dieser Synchronisierung verwendet hast“ erscheint bei jeder neuen Version und ist keine Fehlermeldung. Die Plugin-Version auf der Seite des Plugins bestätigt den neuen Stand. Danach eine neue Cowork-Sitzung starten; der Connector bleibt in der Regel verbunden, andernfalls wie unter „Verbindung neu anmelden“ erneut verbinden.
 
 Ein per Zip-Upload installiertes Plugin lässt sich nicht zuverlässig überschreiben: Es zuerst unter **Customize > Plugins**, Reiter **Yours** (deutsche Oberfläche: **Anpassungen > Plugins > Deine**) über **Entfernen** löschen, dann die neue Zip-Datei hochladen. Erscheint die neue Fassung nicht sofort, kann sie verzögert sein; nach einer Stunde erneut prüfen.
 
@@ -59,15 +59,14 @@ Das Plugin gilt für die ChatGPT-Desktop-App, in allen Tarifen einschließlich F
 
 **Voraussetzung in der Desktop-App:** Unter **Einstellungen > Allgemein** muss **Plugins** („Allow ChatGPT to use installed plugins") eingeschaltet sein. Dieser Schalter erlaubt ChatGPT, installierte Plugins zu verwenden.
 
-1. In der Desktop-App unter **Plugins** → **Hinzufügen** den Marketplace hinzufügen und `tobias-zucali/EmpCo-UWG-Monitor-Plugin` eingeben. In Codex im Terminal: `codex plugin marketplace add tobias-zucali/EmpCo-UWG-Monitor-Plugin`.
-2. Das Plugin `EmpCo-UWG Monitor (Dev)` aus diesem Marketplace installieren.
-3. In der Desktop-App **Plugins** → Reiter **Persönlich** öffnen und beim Eintrag `EmpCo-UWG Monitor (Dev)` auf **+** klicken. ChatGPT leitet zur Anmeldung weiter: dort den Zugangscode eingeben und bestätigen.
+1. In der Desktop-App **Einstellungen > Plugins** öffnen (englische Oberfläche: **Settings > Plugins**), oben rechts **Hinzufügen > Marketplace hinzufügen** wählen (**Add > Add a marketplace**) und `tobias-zucali/EmpCo-UWG-Monitor-Plugin` eingeben. Der Marketplace erscheint danach im Reiter **Marketplace**.
+2. Zu **Anpassen > Plugins** (**Customize > Plugins**) wechseln und den Reiter **Persönlich** (**Personal**) öffnen. Unter dem Namen des Marketplaces steht das Plugin `EmpCo-UWG Monitor (Dev)`; auf **+** klicken. ChatGPT leitet zur Anmeldung weiter: dort den Zugangscode eingeben und bestätigen.
 
-Ist der Marketplace nicht erreichbar, lässt sich dasselbe Paket als Zip-Datei hochladen: `https://snowflake-blasphemy-waged.ngrok-free.dev/downloads/empco-uwg-monitor-plugin.zip` herunterladen und in der Desktop-App oder im Browser (chatgpt.com) unter **Plugins** → **Hinzufügen** → **Plugin hochladen** auswählen; danach Schritt 3. Ein hochgeladenes Plugin lässt sich in ChatGPT weder aktualisieren noch löschen.
+Ist der Marketplace nicht erreichbar, lässt sich dasselbe Paket als Zip-Datei hochladen: `https://snowflake-blasphemy-waged.ngrok-free.dev/downloads/empco-uwg-monitor-plugin.zip` herunterladen und in der Desktop-App oder im Browser (chatgpt.com) unter **Plugins** → **Hinzufügen** → **Plugin hochladen** auswählen; danach Schritt 2 (Anmeldung). Ein hochgeladenes Plugin lässt sich in ChatGPT weder aktualisieren noch löschen.
 
 ### Aktualisieren
 
-In der Desktop-App den Marketplace unter **Plugins** aktualisieren; in Codex im Terminal `codex plugin marketplace upgrade`. Danach einen neuen Chat im Modus **Work** starten.
+In der Desktop-App unter **Einstellungen > Plugins**, Reiter **Marketplace**, beim Marketplace `tobias-zucali/EmpCo-UWG-Monitor-Plugin` auf **Upgrade** klicken. Danach einen neuen Chat im Modus **Work** starten.
 
 ### Verwendung
 

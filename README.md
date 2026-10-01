@@ -1,14 +1,13 @@
 # EmpCo-UWG Monitor (Dev) – Plugin-Marketplace
 
-Dieses Repository enthält ausschließlich das gebaute Plugin „EmpCo-UWG Monitor (Dev)" (Version 4.0.0-dev.g0a4d07d.dirty.hb1d0840c88b0) für Claude, ChatGPT und Codex und wird bei jedem Release automatisch befüllt. Änderungen hier werden überschrieben.
+Dieses Repository enthält ausschließlich das gebaute Plugin „EmpCo-UWG Monitor (Dev)" (Version 4.0.0-dev.gda9d29d) für Claude, ChatGPT und Codex und wird bei jedem Release automatisch befüllt. Änderungen hier werden überschrieben.
 
 Zum Verwenden ist ein Zugangscode (Lizenz) nötig, der bei der Anmeldung der Verbindung eingegeben wird.
 
 ## Installation
 
 - **Claude Code:** `/plugin marketplace add tobias-zucali/DEVELOPMENT-EmpCo-UWG-Monitor-Plugin`, dann `/plugin install empco-uwg-monitor-dev@empco-uwg-monitor-dev`
-- **Codex:** `codex plugin marketplace add tobias-zucali/DEVELOPMENT-EmpCo-UWG-Monitor-Plugin`
-- **Claude (Desktop-App, Cowork) und ChatGPT (Desktop-App):** Marketplace in der Plugin-Verwaltung hinzufügen und `tobias-zucali/DEVELOPMENT-EmpCo-UWG-Monitor-Plugin` angeben.
+- **Claude (Desktop-App, Cowork) und ChatGPT (Desktop-App, Codex):** Marketplace in der Plugin-Verwaltung hinzufügen und `tobias-zucali/DEVELOPMENT-EmpCo-UWG-Monitor-Plugin` angeben (Schritte in der Anleitung).
 
 Als Rückfall steht dasselbe Paket als Zip-Datei bereit: [empco-uwg-monitor-plugin.zip](https://github.com/tobias-zucali/DEVELOPMENT-EmpCo-UWG-Monitor-Plugin/releases/latest/download/empco-uwg-monitor-plugin.zip) (Upload-Schritte siehe Anleitung).
 
