@@ -1,0 +1,3 @@
+interface:
+  display_name: "EmpCo-UWG Monitor (Dev)"
+  short_description: "Prüft Werbe- und Marketinginhalte auf Greenwashing-Risiken nach UWG und EmpCo-Richtlinie"

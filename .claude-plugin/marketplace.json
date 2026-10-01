@@ -1,0 +1,13 @@
+{
+  "name": "empco-uwg-monitor-dev",
+  "owner": { "name": "Niederschick OG & Tobias Zucali" },
+  "description": "Marketplace des Plugins EmpCo-UWG Monitor (Dev).",
+  "plugins": [
+    {
+      "name": "empco-uwg-monitor-dev",
+      "source": "./",
+      "description": "Erkennt Greenwashing – irreführende Umweltaussagen, unbelegte Klimaversprechen, selbstgemachte Siegel – nach österreichischem UWG und EU EmpCo-Richtlinie 2024/825.",
+      "category": "productivity"
+    }
+  ]
+}

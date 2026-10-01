@@ -1,0 +1,20 @@
+{
+  "name": "empco-uwg-monitor-dev",
+  "interface": {
+    "displayName": "EmpCo-UWG Monitor (Dev)"
+  },
+  "plugins": [
+    {
+      "name": "empco-uwg-monitor-dev",
+      "source": {
+        "source": "local",
+        "path": "."
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Business & Operations"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "empco-uwg-monitor-dev": {
+      "type": "streamable-http",
+      "url": "https://snowflake-blasphemy-waged.ngrok-free.dev/v1/mcp"
+    }
+  }
+}
