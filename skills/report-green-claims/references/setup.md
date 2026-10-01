@@ -1,6 +1,6 @@
 ---
 license: Copyright (c) 2026 Niederschick OG & Tobias Zucali. All rights reserved. Use restricted to customers with a valid agreement with Niederschick OG.
-build: v3.1-46-gb8b9bc8
+build: v3.1-47-g0a4d07d
 ---
 
 # Einrichtung: Plugin für Claude und ChatGPT
@@ -22,11 +22,16 @@ Claude läuft im Browser (claude.ai) und in der Claude-Desktop-App und hat drei 
 
 Das Plugin wird über einen **Marketplace** installiert, ein öffentliches GitHub-Repository mit dem Plugin: `tobias-zucali/EmpCo-UWG-Monitor-Plugin`. Er ist der empfohlene Weg, weil sich das Plugin darüber aktualisieren und entfernen lässt. Ein bereits über Zip-Upload installiertes Plugin mit demselben Namen zuerst entfernen (**Customize > Plugins > Yours**), damit Befehle nicht mit der alten Installation verwechselt werden.
 
-1. Den Marketplace hinzufügen: in der Desktop-App oder auf claude.ai unter **Customize > Plugins > Add** (deutsche Oberfläche: **Anpassungen > Plugins > Hinzufügen**) die Option für einen Marketplace wählen und `tobias-zucali/EmpCo-UWG-Monitor-Plugin` eingeben; in Claude Code im Terminal `/plugin marketplace add tobias-zucali/EmpCo-UWG-Monitor-Plugin`.
-2. Das Plugin `EmpCo-UWG Monitor (Dev)` aus diesem Marketplace installieren; in Claude Code `/plugin install empco-uwg-monitor-dev@empco-uwg-monitor-dev`.
-3. Den Connector des Plugins verbinden: Claude leitet zur Anmeldung weiter, dort den Zugangscode eingeben und bestätigen. Erst danach steht `fetch_claims_monitor_step` zur Verfügung – die Installation allein reicht nicht.
+In der Desktop-App und auf claude.ai (deutsche Oberfläche):
 
-Ist der Marketplace nicht erreichbar, lässt sich dasselbe Paket als Zip-Datei installieren: `https://snowflake-blasphemy-waged.ngrok-free.dev/downloads/empco-uwg-monitor-plugin.zip` herunterladen und unter **Customize > Plugins > Add > Upload plugin** (deutsche Oberfläche: **Anpassungen > Plugins > Hinzufügen > Plugin hochladen**) auswählen. Danach den Connector wie in Schritt 3 verbinden.
+1. **Anpassungen > Plugins > Hinzufügen > Marketplace hinzufügen** wählen, dann **Aus einem Repository hinzufügen**. Im Feld **URL** `tobias-zucali/EmpCo-UWG-Monitor-Plugin` eingeben, **Automatisch synchronisieren** eingeschaltet lassen und **Synchronisieren** wählen. Der Warnhinweis zu Plugins aus Marktplätzen gilt für jeden fremden Marketplace; das Plugin dieses Marketplaces stammt vom Anbieter des Monitors.
+2. Den Reiter **Entdecken** öffnen, nach dem Plugin suchen (z. B. „EmpCo“) und beim Plugin **Hinzufügen** wählen. Claude öffnet danach die Seite des Plugins.
+3. Dort zum Reiter **Konnektoren** wechseln und den Connector `empco-uwg-monitor-dev` verbinden: Claude leitet zur Anmeldung weiter, dort den Zugangscode eingeben und bestätigen. Erst danach steht `fetch_claims_monitor_step` zur Verfügung – die Installation allein reicht nicht.
+4. Oben auf der Seite des Plugins **In Cowork ausprobieren** wählen und einen Prüfauftrag stellen.
+
+In Claude Code im Terminal: `/plugin marketplace add tobias-zucali/EmpCo-UWG-Monitor-Plugin`, dann `/plugin install empco-uwg-monitor-dev@empco-uwg-monitor-dev`; den Connector anschließend wie in Schritt 3 verbinden.
+
+Ist der Marketplace nicht erreichbar, lässt sich dasselbe Paket als Zip-Datei installieren: `https://snowflake-blasphemy-waged.ngrok-free.dev/downloads/empco-uwg-monitor-plugin.zip` herunterladen und unter **Customize > Plugins > Add > Upload plugin** (deutsche Oberfläche: **Anpassungen > Plugins > Hinzufügen > Plugin hochladen**) auswählen. Danach den Connector wie in Schritt 3 verbinden und **In Cowork ausprobieren** wählen.
 
 ### Verwendung
 
@@ -36,7 +41,7 @@ Eine neue Cowork-Sitzung starten und einen Prüfauftrag stellen, z. B. „Prüfe
 
 ### Aktualisieren
 
-Der Marketplace liefert neue Versionen des Plugins: In der Plugin-Verwaltung den Marketplace `empco-uwg-monitor-dev` aktualisieren und das Plugin auf die neue Version heben; in Claude Code `/plugin marketplace update empco-uwg-monitor-dev`. Die Plugin-Version auf der Seite des Plugins bestätigt den neuen Stand. Danach eine neue Cowork-Sitzung starten; der Connector bleibt in der Regel verbunden, andernfalls wie unter „Verbindung neu anmelden“ erneut verbinden.
+Mit eingeschaltetem **Automatisch synchronisieren** übernimmt Claude neue Versionen aus dem Marketplace selbst. Für sofortige Aktualisierung unter **Anpassungen > Plugins > Hinzufügen > Marketplaces verwalten** den Marketplace `tobias-zucali/EmpCo-UWG-Monitor-Plugin` neu synchronisieren; in Claude Code `/plugin marketplace update empco-uwg-monitor-dev`. Die Plugin-Version auf der Seite des Plugins bestätigt den neuen Stand. Danach eine neue Cowork-Sitzung starten; der Connector bleibt in der Regel verbunden, andernfalls wie unter „Verbindung neu anmelden“ erneut verbinden.
 
 Ein per Zip-Upload installiertes Plugin lässt sich nicht zuverlässig überschreiben: Es zuerst unter **Customize > Plugins**, Reiter **Yours** (deutsche Oberfläche: **Anpassungen > Plugins > Deine**) über **Entfernen** löschen, dann die neue Zip-Datei hochladen. Erscheint die neue Fassung nicht sofort, kann sie verzögert sein; nach einer Stunde erneut prüfen.
 

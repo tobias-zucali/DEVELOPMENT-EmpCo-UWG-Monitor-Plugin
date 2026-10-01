@@ -1,6 +1,6 @@
 ---
 license: Copyright (c) 2026 Niederschick OG & Tobias Zucali. All rights reserved. Use restricted to customers with a valid agreement with Niederschick OG.
-build: v3.1-46-gb8b9bc8
+build: v3.1-47-g0a4d07d
 ---
 
 # Ablaufbericht

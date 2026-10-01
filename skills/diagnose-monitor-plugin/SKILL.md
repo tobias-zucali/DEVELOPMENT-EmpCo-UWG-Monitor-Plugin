@@ -1,9 +1,9 @@
 ---
 name: diagnose-monitor-plugin
-description: Diagnose des EmpCo-UWG Monitor Plugins – meldet belegte Fähigkeiten dieser Umgebung, Verbindung zum Regelserver und alle Versionen, oder wertet auf Wunsch den Ablauf des letzten Laufs aus. Verwenden, wenn die Person die Diagnose verlangt oder in einem Gespräch, in dem dieses Plugin bereits verwendet wurde, nach Version, Stand oder Verbindung fragt oder über eine Störung klagt; nicht für fachliche Prüfaufträge.
+description: Diagnose des EmpCo-UWG Monitor Plugins – meldet belegte Fähigkeiten dieser Umgebung, Verbindung zum Regelserver und alle Versionen, oder wertet auf Wunsch den Ablauf des letzten Laufs aus. Verwenden, wenn die Person die Diagnose verlangt oder in einem Gespräch, in dem dieses Plugin bereits verwendet wurde, nach Version, Stand oder Verbindung fragt, über eine Störung klagt oder den Ablauf des Plugins hinterfragt („prüfe die Antwort“, „was ist passiert“, „warum hast du das so gemacht“, „war das richtig“); nicht für fachliche Prüfaufträge zu einem Text oder einer Website.
 license: Copyright (c) 2026 Niederschick OG & Tobias Zucali. All rights reserved. Use restricted to customers with a valid agreement with Niederschick OG.
 version: 4.0.0
-build: v3.1-46-gb8b9bc8
+build: v3.1-47-g0a4d07d
 ---
 
 # Diagnose des EmpCo-UWG Monitors

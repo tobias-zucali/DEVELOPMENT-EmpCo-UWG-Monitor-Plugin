@@ -1,6 +1,6 @@
 # EmpCo-UWG Monitor (Dev) – Plugin-Marketplace
 
-Dieses Repository enthält ausschließlich das gebaute Plugin „EmpCo-UWG Monitor (Dev)" (Version 4.0.0-dev.gb8b9bc8.dirty.hb1d0840c88b0) für Claude, ChatGPT und Codex und wird bei jedem Release automatisch befüllt. Änderungen hier werden überschrieben.
+Dieses Repository enthält ausschließlich das gebaute Plugin „EmpCo-UWG Monitor (Dev)" (Version 4.0.0-dev.g0a4d07d.dirty.hb1d0840c88b0) für Claude, ChatGPT und Codex und wird bei jedem Release automatisch befüllt. Änderungen hier werden überschrieben.
 
 Zum Verwenden ist ein Zugangscode (Lizenz) nötig, der bei der Anmeldung der Verbindung eingegeben wird.
 
